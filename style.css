@@ -8,7 +8,7 @@
     --bg-color-main: rgb(224, 224, 224);
     --bg-color-text: #ffffff;
     --text-size: calc(10px + 0.5vw);
-    --heading-fs: calc(12px + 0.8vw);
+    --heading-fs: calc(12px + 0.6vw);
     --image-size: calc(20px + 1vw);
     --heading-fw: 600;
 }
@@ -166,7 +166,121 @@ ul {
     border-style: none;
 }
 
+/* Main content */
 
 .main-content {
     background-color: var(--bg-color-main);
+    display: grid;
+    grid-template-columns: 2fr 2fr minmax(220px, 0.5fr);
+    grid-template-rows: 0.3fr 2fr 1fr 1fr 2fr;
+    padding: 20px;
+    gap: 20px;
+    /* align-content: center; */
+    justify-content: center;
 }
+
+.header-first {
+    grid-column: 1 / 3;
+}
+
+.box1 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+    margin-bottom: 10px;
+}
+
+.card.third, 
+.card.fourth {
+    grid-row: 3 / 5;
+}
+
+.box2 {
+    grid-row: 4 / 6;
+    display: grid;
+    grid-template-rows: 1fr 8fr;
+}
+
+.main-content h1 {
+    font-size: 22px;
+    align-self: center;
+}
+
+.main-content h2 {
+    font-size: 18px;
+    padding-bottom: 6px;
+}
+
+.main-content h3 {
+    font-size: 12px;
+}
+
+.main-content p {
+    color: rgb(153, 152, 152);
+}
+
+.trend-items p,
+.announcements p {
+    font-size:10px;
+    padding-top: 5px;
+}
+
+.box1,
+.card,
+.trend-items {
+    display: grid;
+    background-color: var(--bg-color-text);
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 8px -2px rgba(105, 105, 105, 0.5);
+}
+
+.card .icons {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 15px;
+    justify-content: end;
+    align-items: end;
+    padding: 20px;
+}
+
+.card {
+    border-left: 8px solid rgb(241, 225, 150);
+}
+
+.box2 {
+    display: grid;
+}
+
+.box1 > div:nth-child(2) {
+    border-bottom: 1px solid var(--bg-color-main);
+    border-top: 1px solid var(--bg-color-main);
+}
+
+.announcements {
+    align-content: center;
+}
+
+.box2 h1 {
+    align-self: start;
+}
+
+.trend-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    gap: 10px;
+}
+
+.trend-items > div:not(:last-child) {
+    display: flex;
+    gap: 15px;
+}
+
+.trend-items a {
+    text-decoration: none;
+}
+
+
+
+
