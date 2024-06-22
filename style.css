@@ -92,7 +92,7 @@ ul {
 .header {
     background-color: var(--bg-color-text);
     font-weight: var(--heading-fw);
-    margin-bottom: 4px;
+    position: relative; /* To show the box-shadow it needs to be positioned */
     box-shadow: 0px 8px 6px -2px rgba(105, 105, 105, 0.5);
     padding: 5px 30px;
     display: grid;
